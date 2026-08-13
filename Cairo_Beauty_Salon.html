@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cairo Beauty Salon — Beauty, Fahaheel Style</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --primary:#C77D93;
+    --primary-dark:#9E5470;
+    --ink:#20191B;
+    --ink-soft:#5C4F51;
+    --cream:#FAF7F5;
+    --cream-2:#F2E9E6;
+    --white:#FFFFFF;
+    --shadow: 0 20px 50px -20px rgba(32,25,27,0.25);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--cream);overflow-x:hidden;}
+  h1,h2,h3,.serif{font-family:'Playfair Display',serif;}
+  a{text-decoration:none;color:inherit;}
+  img{display:block;max-width:100%;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+  section{padding:110px 0;}
+  @media(max-width:768px){section{padding:70px 0;}}
+
+  header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,247,245,0.85);backdrop-filter:blur(10px);border-bottom:1px solid rgba(32,25,27,0.06);transition:.3s;}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;max-width:1180px;margin:0 auto;}
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand-mark{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:600;font-size:16px;box-shadow:0 8px 20px -6px color-mix(in srgb, var(--primary) 60%, transparent);}
+  .brand-name{font-family:'Playfair Display',serif;font-weight:600;font-size:18px;letter-spacing:.2px;}
+  .brand-name span{display:block;font-family:'Inter',sans-serif;font-size:10px;letter-spacing:2.2px;color:var(--primary-dark);font-weight:600;text-transform:uppercase;margin-top:2px;}
+  .nav-links{display:flex;gap:38px;align-items:center;}
+  .nav-links a{font-size:14px;font-weight:500;color:var(--ink-soft);position:relative;padding:4px 0;}
+  .nav-links a:hover{color:var(--ink);}
+  .nav-links a::after{content:"";position:absolute;bottom:0;left:0;width:0;height:1.5px;background:var(--primary);transition:.25s;}
+  .nav-links a:hover::after{width:100%;}
+  .nav-cta{background:var(--ink);color:#fff;padding:11px 22px;border-radius:30px;font-size:13px;font-weight:600;display:flex;align-items:center;gap:8px;transition:.25s;white-space:nowrap;}
+  .nav-cta:hover{background:var(--primary-dark);transform:translateY(-2px);}
+  .nav-toggle{display:none;font-size:24px;background:none;border:none;cursor:pointer;color:var(--ink);}
+  @media(max-width:900px){.nav-links{display:none;}.nav-toggle{display:block;}}
+
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding-top:100px;overflow:hidden;}
+  .hero-bg{position:absolute;inset:0;z-index:0;background:linear-gradient(100deg, rgba(32,25,27,0.74) 0%, rgba(32,25,27,0.44) 45%, color-mix(in srgb, var(--primary) 28%, transparent) 100%), url('https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;}
+  .hero-content{position:relative;z-index:1;max-width:640px;color:#fff;}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#F2DCE3;margin-bottom:24px;}
+  .eyebrow::before{content:"";width:32px;height:1px;background:#F2DCE3;}
+  .hero h1{font-size:clamp(38px,5.6vw,64px);line-height:1.1;font-weight:600;margin-bottom:22px;}
+  .hero h1 em{font-style:italic;color:#F4C9D6;font-weight:500;}
+  .hero p{font-size:17px;line-height:1.7;color:#EADFE0;max-width:480px;margin-bottom:36px;}
+  .btn-row{display:flex;gap:16px;flex-wrap:wrap;}
+  .btn{padding:15px 30px;border-radius:32px;font-size:14px;font-weight:600;display:inline-flex;align-items:center;gap:10px;transition:.25s;}
+  .btn-primary{background:var(--primary);color:#fff;box-shadow:0 14px 30px -10px color-mix(in srgb, var(--primary) 70%, transparent);}
+  .btn-primary:hover{background:var(--primary-dark);transform:translateY(-3px);}
+  .btn-ghost{border:1.5px solid rgba(255,255,255,0.55);color:#fff;}
+  .btn-ghost:hover{background:rgba(255,255,255,0.12);}
+  .hero-stats{position:absolute;bottom:0;left:0;right:0;z-index:1;background:rgba(255,255,255,0.08);backdrop-filter:blur(14px);border-top:1px solid rgba(255,255,255,0.18);}
+  .hero-stats .wrap{display:flex;justify-content:space-between;padding:24px 32px;flex-wrap:wrap;gap:18px;}
+  .stat{color:#fff;}
+  .stat b{font-family:'Playfair Display',serif;font-size:24px;font-weight:600;display:block;}
+  .stat span{font-size:11.5px;letter-spacing:1px;text-transform:uppercase;color:#E9D3DA;}
+
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  .section-head{max-width:560px;margin:0 auto 56px;text-align:center;}
+  .section-head .eyebrow{color:var(--primary-dark);justify-content:center;}
+  .section-head .eyebrow::before{background:var(--primary-dark);}
+  .section-head h2{font-size:clamp(28px,3.8vw,40px);font-weight:600;color:var(--ink);margin-bottom:14px;}
+  .section-head p{color:var(--ink-soft);font-size:15px;line-height:1.7;}
+
+  .about{background:var(--white);}
+  .about-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:64px;align-items:center;}
+  @media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:36px;}}
+  .about-imgs{position:relative;}
+  .about-imgs img{border-radius:18px;box-shadow:var(--shadow);}
+  .about-imgs .img-back{width:78%;}
+  .about-imgs .img-front{position:absolute;bottom:-38px;right:-18px;width:56%;border:6px solid var(--white);}
+  @media(max-width:860px){.about-imgs{margin-bottom:56px;}.about-imgs .img-front{right:0;}}
+  .about-copy .eyebrow{color:var(--primary-dark);}
+  .about-copy .eyebrow::before{background:var(--primary-dark);}
+  .about-copy h2{font-size:clamp(26px,3.4vw,36px);font-weight:600;margin-bottom:18px;line-height:1.22;}
+  .about-copy p{color:var(--ink-soft);line-height:1.85;font-size:15px;margin-bottom:26px;}
+  .feature-list{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .feature{display:flex;gap:12px;align-items:flex-start;}
+  .feature .ico{width:34px;height:34px;border-radius:10px;background:var(--cream-2);color:var(--primary-dark);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px;}
+  .feature b{font-size:13.5px;display:block;margin-bottom:2px;}
+  .feature span{font-size:12px;color:var(--ink-soft);}
+
+  .services{background:var(--cream);}
+  .service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+  @media(max-width:960px){.service-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:560px){.service-grid{grid-template-columns:1fr;}}
+  .service-card{background:var(--white);border-radius:18px;padding:34px 26px;box-shadow:0 10px 30px -18px rgba(32,25,27,0.18);transition:.3s;border:1px solid rgba(32,25,27,0.05);}
+  .service-card:hover{transform:translateY(-8px);box-shadow:var(--shadow);}
+  .service-card .num{font-family:'Playfair Display',serif;font-size:13px;color:var(--primary);font-weight:600;letter-spacing:1px;margin-bottom:16px;display:block;}
+  .service-card h3{font-size:17.5px;font-weight:600;margin-bottom:10px;}
+  .service-card p{font-size:13px;color:var(--ink-soft);line-height:1.7;}
+
+  .gallery{background:var(--white);}
+  .gallery-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:16px;height:500px;}
+  @media(max-width:768px){.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:180px 180px 180px;height:auto;}}
+  .gallery-grid img{width:100%;height:100%;object-fit:cover;border-radius:16px;transition:.4s;}
+  .g-item{overflow:hidden;border-radius:16px;position:relative;}
+  .g-item:nth-child(1){grid-row:1/3;}
+  .g-item:hover img{transform:scale(1.08);}
+
+  .testimonial{background:var(--ink);color:#fff;text-align:center;position:relative;overflow:hidden;}
+  .testimonial::before{content:"\201C";position:absolute;top:10px;left:50%;transform:translateX(-50%);font-family:'Playfair Display',serif;font-size:200px;color:rgba(255,255,255,0.05);line-height:1;}
+  .testimonial-inner{position:relative;max-width:660px;margin:0 auto;}
+  .stars{color:#F4C9D6;font-size:17px;letter-spacing:4px;margin-bottom:26px;}
+  .testimonial p.quote{font-family:'Playfair Display',serif;font-size:clamp(20px,2.8vw,28px);line-height:1.55;font-weight:500;margin-bottom:28px;}
+  .t-author{display:flex;align-items:center;justify-content:center;gap:14px;}
+  .t-author .av{width:44px;height:44px;border-radius:50%;background:var(--primary);display:flex;align-items:center;justify-content:center;font-weight:600;font-family:'Playfair Display',serif;}
+  .t-author b{display:block;font-size:14px;}
+  .t-author span{font-size:12px;color:#c9bcbf;}
+
+  .cta{background:linear-gradient(120deg,var(--primary) 0%,var(--primary-dark) 100%);color:#fff;text-align:center;position:relative;overflow:hidden;}
+  .cta h2{font-size:clamp(28px,4.2vw,44px);font-weight:600;margin-bottom:16px;}
+  .cta p{max-width:520px;margin:0 auto 34px;color:#FBE8ED;font-size:15px;line-height:1.7;}
+  .cta .btn-row{justify-content:center;}
+  .cta .btn-primary{background:#fff;color:var(--primary-dark);}
+  .cta .btn-primary:hover{background:var(--ink);color:#fff;}
+  .cta .btn-ghost{border-color:rgba(255,255,255,0.5);}
+  .contact-strip{display:flex;justify-content:center;gap:44px;margin-top:52px;flex-wrap:wrap;}
+  .contact-strip div{text-align:left;}
+  .contact-strip .lbl{font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:#FBE8ED;opacity:.8;margin-bottom:4px;}
+  .contact-strip .val{font-size:14.5px;font-weight:600;}
+
+  footer{background:var(--ink);color:#cbb9bd;padding:48px 0 24px;}
+  .footer-grid{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:22px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,0.08);}
+  .footer-brand{display:flex;align-items:center;gap:12px;}
+  .footer-brand .brand-name{color:#fff;}
+  .social-row{display:flex;gap:14px;}
+  .social-row a{width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,0.18);display:flex;align-items:center;justify-content:center;font-size:13px;color:#fff;transition:.25s;}
+  .social-row a:hover{background:var(--primary);border-color:var(--primary);}
+  .footer-bottom{display:flex;justify-content:space-between;padding-top:20px;font-size:12px;flex-wrap:wrap;gap:10px;}
+  .footer-bottom .credit{color:#8a7579;}
+  .footer-bottom .credit a{color:#F4C9D6;font-weight:600;}
+
+  .wa-float{position:fixed;bottom:26px;right:26px;z-index:90;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px -8px rgba(37,211,102,0.65);font-size:26px;color:#fff;animation:pulse 2.4s infinite;}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,0.55);}70%{box-shadow:0 0 0 16px rgba(37,211,102,0);}100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}}
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <nav>
+    <div class="brand">
+      <div class="brand-mark">CB</div>
+      <div class="brand-name">Cairo Beauty Salon<span>Fahaheel · KUWAIT</span></div>
+    </div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav-cta" href="#" target="_blank" rel="noopener">Book Now →</a>
+    <button class="nav-toggle" aria-label="menu">☰</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <div class="hero-content">
+      <div class="eyebrow">Salon & Beauty Lounge · Fahaheel</div>
+      <h1>Beauty,  <em>Fahaheel Style</em></h1>
+      <p>Cairo Beauty Salon is a trusted name in Fahaheel offering a full range of beauty services in a relaxing, professional environment. From everyday self-care to your biggest occasions — every service is designed around how you want to feel.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="#" target="_blank" rel="noopener">💬 Book on WhatsApp</a>
+        <a class="btn btn-ghost" href="#services">View Services</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="wrap">
+      <div class="stat"><b>5</b><span>Years in Fahaheel</span></div>
+      <div class="stat"><b>4.9 ★</b><span>Client Rating</span></div>
+      <div class="stat"><b>1,000+</b><span>Happy Clients</span></div>
+      <div class="stat"><b>10AM – 10PM</b><span>Open Daily</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-imgs reveal">
+      <img class="img-back" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=80" alt="Cairo Beauty Salon">
+      <img class="img-front" src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&w=700&q=80" alt="Cairo Beauty Salon">
+    </div>
+    <div class="about-copy reveal">
+      <div class="eyebrow">About Us</div>
+      <h2>A calm space, built for confidence</h2>
+      <p>Cairo Beauty Salon is a trusted name in Fahaheel offering a full range of beauty services in a relaxing, professional environment. Every visit is tailored to you, using premium products and techniques that keep clients coming back.</p>
+      <div class="feature-list">
+        <div class="feature"><div class="ico">✓</div><div><b>Certified Stylists</b><span>Trained & experienced team</span></div></div>
+        <div class="feature"><div class="ico">✓</div><div><b>Premium Products</b><span>Only trusted, quality brands</span></div></div>
+        <div class="feature"><div class="ico">✓</div><div><b>Private Rooms</b><span>Comfort & privacy guaranteed</span></div></div>
+        <div class="feature"><div class="ico">✓</div><div><b>Easy Booking</b><span>Book instantly via WhatsApp</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">What We Offer</div>
+      <h2>Services tailored to you</h2>
+      <p>From everyday self-care to your biggest occasions — every service is designed around how you want to feel.</p>
+    </div>
+    <div class="service-grid">
+      <div class="service-card reveal"><span class="num">01</span><h3>Hair Styling</h3><p>Cuts, coloring, and styling by trained professionals.</p></div>
+      <div class="service-card reveal"><span class="num">02</span><h3>Skin Care</h3><p>Facials and treatments tailored to your skin type.</p></div>
+      <div class="service-card reveal"><span class="num">03</span><h3>Nail Art</h3><p>Manicures, pedicures, and creative nail designs.</p></div>
+      <div class="service-card reveal"><span class="num">04</span><h3>Bridal Packages</h3><p>Full bridal glam packages for your big day.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Take A Look</div>
+      <h2>A look inside the salon</h2>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="g-item"><img src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&w=900&q=80" alt="Cairo Beauty Salon"></div>
+      <div class="g-item"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=700&q=80" alt="Cairo Beauty Salon"></div>
+      <div class="g-item"><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=700&q=80" alt="Cairo Beauty Salon"></div>
+      <div class="g-item"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=700&q=80" alt="Cairo Beauty Salon"></div>
+      <div class="g-item"><img src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?auto=format&fit=crop&w=700&q=80" alt="Cairo Beauty Salon"></div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial" id="testimonials">
+  <div class="wrap testimonial-inner reveal">
+    <div class="stars">★★★★★</div>
+    <p class="quote">The best salon experience in Kuwait — I always leave feeling amazing.</p>
+    <div class="t-author">
+      <div class="av">N</div>
+      <div><b>Noura Al-Fahad</b><span>Fahaheel, Kuwait</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="wrap reveal">
+    <div class="eyebrow" style="justify-content:center;color:#FBE8ED;">Ready When You Are</div>
+    <h2>Book your visit today</h2>
+    <p>Message us on WhatsApp for same-day availability — our team will find the right slot for you.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="#" target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
+      <a class="btn btn-ghost" href="https://instagram.com/kbrewaqdigital" target="_blank" rel="noopener">📷 @kbrewaqdigital</a>
+    </div>
+    <div class="contact-strip">
+      <div><div class="lbl">Location</div><div class="val">Fahaheel, Kuwait</div></div>
+      <div><div class="lbl">Phone</div><div class="val">Message us on Instagram</div></div>
+      <div><div class="lbl">Hours</div><div class="val">Daily · 10AM – 10PM</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-mark">CB</div>
+        <div class="brand-name">Cairo Beauty Salon</div>
+      </div>
+      <div class="social-row">
+        <a href="https://instagram.com/kbrewaqdigital" target="_blank" rel="noopener">IG</a>
+        <a href="#" target="_blank" rel="noopener">WA</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span style="color:#8a7579;">© 2026 Cairo Beauty Salon. All rights reserved.</span>
+      <span class="credit">Demo by <a href="https://wa.me/96550703252" target="_blank" rel="noopener">KB Rewaq Digital</a> — websites, content &amp; automation for Kuwait businesses</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => {
+    const open = links.style.display === 'flex';
+    links.style.display = open ? 'none' : 'flex';
+    links.style.cssText += 'position:absolute;top:100%;left:0;right:0;background:#FAF7F5;flex-direction:column;padding:20px 32px;gap:18px;box-shadow:0 12px 20px -10px rgba(0,0,0,0.1);';
+  });
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.style.boxShadow = window.scrollY > 20 ? '0 6px 20px -10px rgba(32,25,27,0.15)' : 'none';
+  });
+</script>
+
+</body>
+</html>
