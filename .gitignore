@@ -1,3 +1,2 @@
-_to_delete/
-*.zip
-*README*
+firebase-debug.log
+*.log
