@@ -3,310 +3,268 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Q Point Translation Typing and Copy Center — Every Document, Handled Right</title>
+<title>Q Point Translation Typing and Copy Center — Translation & Typing Center in Salmiya (also branches in Abbasiya, Mangaf, Hawally, Khaitan)</title>
+<meta name="description" content="Q Point Translation Typing and Copy Center, Translation & Typing Center in Salmiya (also branches in Abbasiya, Mangaf, Hawally, Khaitan), Kuwait. Reliable help, done right the first time — across {area}.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>:root{--accent:#4A6FA5;--accent-d:#324e74;}</style>
 <style>
-  :root{
-    --primary:#F2711C;
-    --primary-dark:#B94F0F;
-    --ink:#20191B;
-    --ink-soft:#5C4F51;
-    --cream:#FAF7F5;
-    --cream-2:#F2E9E6;
-    --white:#FFFFFF;
-    --shadow: 0 20px 50px -20px rgba(32,25,27,0.25);
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--cream);overflow-x:hidden;}
-  h1,h2,h3,.serif{font-family:'Playfair Display',serif;}
-  a{text-decoration:none;color:inherit;}
-  img{display:block;max-width:100%;}
-  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
-  section{padding:110px 0;}
-  @media(max-width:768px){section{padding:70px 0;}}
-
-  header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,247,245,0.85);backdrop-filter:blur(10px);border-bottom:1px solid rgba(32,25,27,0.06);transition:.3s;}
-  nav{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;max-width:1180px;margin:0 auto;}
-  .brand{display:flex;align-items:center;gap:12px;}
-  .brand-mark{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:600;font-size:16px;box-shadow:0 8px 20px -6px color-mix(in srgb, var(--primary) 60%, transparent);}
-  .brand-name{font-family:'Playfair Display',serif;font-weight:600;font-size:18px;letter-spacing:.2px;}
-  .brand-name span{display:block;font-family:'Inter',sans-serif;font-size:10px;letter-spacing:2.2px;color:var(--primary-dark);font-weight:600;text-transform:uppercase;margin-top:2px;}
-  .nav-links{display:flex;gap:38px;align-items:center;}
-  .nav-links a{font-size:14px;font-weight:500;color:var(--ink-soft);position:relative;padding:4px 0;}
-  .nav-links a:hover{color:var(--ink);}
-  .nav-links a::after{content:"";position:absolute;bottom:0;left:0;width:0;height:1.5px;background:var(--primary);transition:.25s;}
-  .nav-links a:hover::after{width:100%;}
-  .nav-cta{background:var(--ink);color:#fff;padding:11px 22px;border-radius:30px;font-size:13px;font-weight:600;display:flex;align-items:center;gap:8px;transition:.25s;white-space:nowrap;}
-  .nav-cta:hover{background:var(--primary-dark);transform:translateY(-2px);}
-  .nav-toggle{display:none;font-size:24px;background:none;border:none;cursor:pointer;color:var(--ink);}
-  @media(max-width:900px){.nav-links{display:none;}.nav-toggle{display:block;}}
-
-  .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding-top:100px;overflow:hidden;}
-  .hero-bg{position:absolute;inset:0;z-index:0;background:linear-gradient(100deg, rgba(32,25,27,0.74) 0%, rgba(32,25,27,0.44) 45%, color-mix(in srgb, var(--primary) 28%, transparent) 100%), url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;}
-  .hero-content{position:relative;z-index:1;max-width:640px;color:#fff;}
-  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#F2DCE3;margin-bottom:24px;}
-  .eyebrow::before{content:"";width:32px;height:1px;background:#F2DCE3;}
-  .hero h1{font-size:clamp(38px,5.6vw,64px);line-height:1.1;font-weight:600;margin-bottom:22px;}
-  .hero h1 em{font-style:italic;color:#F4C9D6;font-weight:500;}
-  .hero p{font-size:17px;line-height:1.7;color:#EADFE0;max-width:480px;margin-bottom:36px;}
-  .btn-row{display:flex;gap:16px;flex-wrap:wrap;}
-  .btn{padding:15px 30px;border-radius:32px;font-size:14px;font-weight:600;display:inline-flex;align-items:center;gap:10px;transition:.25s;}
-  .btn-primary{background:var(--primary);color:#fff;box-shadow:0 14px 30px -10px color-mix(in srgb, var(--primary) 70%, transparent);}
-  .btn-primary:hover{background:var(--primary-dark);transform:translateY(-3px);}
-  .btn-ghost{border:1.5px solid rgba(255,255,255,0.55);color:#fff;}
-  .btn-ghost:hover{background:rgba(255,255,255,0.12);}
-  .hero-stats{position:absolute;bottom:0;left:0;right:0;z-index:1;background:rgba(255,255,255,0.08);backdrop-filter:blur(14px);border-top:1px solid rgba(255,255,255,0.18);}
-  .hero-stats .wrap{display:flex;justify-content:space-between;padding:24px 32px;flex-wrap:wrap;gap:18px;}
-  .stat{color:#fff;}
-  .stat b{font-family:'Playfair Display',serif;font-size:24px;font-weight:600;display:block;}
-  .stat span{font-size:11.5px;letter-spacing:1px;text-transform:uppercase;color:#E9D3DA;}
-
-  .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease;}
-  .reveal.in{opacity:1;transform:none;}
-
-  .section-head{max-width:560px;margin:0 auto 56px;text-align:center;}
-  .section-head .eyebrow{color:var(--primary-dark);justify-content:center;}
-  .section-head .eyebrow::before{background:var(--primary-dark);}
-  .section-head h2{font-size:clamp(28px,3.8vw,40px);font-weight:600;color:var(--ink);margin-bottom:14px;}
-  .section-head p{color:var(--ink-soft);font-size:15px;line-height:1.7;}
-
-  .about{background:var(--white);}
-  .about-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:64px;align-items:center;}
-  @media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:36px;}}
-  .about-imgs{position:relative;}
-  .about-imgs img{border-radius:18px;box-shadow:var(--shadow);}
-  .about-imgs .img-back{width:78%;}
-  .about-imgs .img-front{position:absolute;bottom:-38px;right:-18px;width:56%;border:6px solid var(--white);}
-  @media(max-width:860px){.about-imgs{margin-bottom:56px;}.about-imgs .img-front{right:0;}}
-  .about-copy .eyebrow{color:var(--primary-dark);}
-  .about-copy .eyebrow::before{background:var(--primary-dark);}
-  .about-copy h2{font-size:clamp(26px,3.4vw,36px);font-weight:600;margin-bottom:18px;line-height:1.22;}
-  .about-copy p{color:var(--ink-soft);line-height:1.85;font-size:15px;margin-bottom:26px;}
-  .feature-list{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-  .feature{display:flex;gap:12px;align-items:flex-start;}
-  .feature .ico{width:34px;height:34px;border-radius:10px;background:var(--cream-2);color:var(--primary-dark);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px;}
-  .feature b{font-size:13.5px;display:block;margin-bottom:2px;}
-  .feature span{font-size:12px;color:var(--ink-soft);}
-
-  .services{background:var(--cream);}
-  .service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
-  @media(max-width:960px){.service-grid{grid-template-columns:1fr 1fr;}}
-  @media(max-width:560px){.service-grid{grid-template-columns:1fr;}}
-  .service-card{background:var(--white);border-radius:18px;padding:34px 26px;box-shadow:0 10px 30px -18px rgba(32,25,27,0.18);transition:.3s;border:1px solid rgba(32,25,27,0.05);}
-  .service-card:hover{transform:translateY(-8px);box-shadow:var(--shadow);}
-  .service-card .num{font-family:'Playfair Display',serif;font-size:13px;color:var(--primary);font-weight:600;letter-spacing:1px;margin-bottom:16px;display:block;}
-  .service-card h3{font-size:17.5px;font-weight:600;margin-bottom:10px;}
-  .service-card p{font-size:13px;color:var(--ink-soft);line-height:1.7;}
-
-  .gallery{background:var(--white);}
-  .gallery-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:16px;height:500px;}
-  @media(max-width:768px){.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:180px 180px 180px;height:auto;}}
-  .gallery-grid img{width:100%;height:100%;object-fit:cover;border-radius:16px;transition:.4s;}
-  .g-item{overflow:hidden;border-radius:16px;position:relative;}
-  .g-item:nth-child(1){grid-row:1/3;}
-  .g-item:hover img{transform:scale(1.08);}
-
-  .testimonial{background:var(--ink);color:#fff;text-align:center;position:relative;overflow:hidden;}
-  .testimonial::before{content:"\201C";position:absolute;top:10px;left:50%;transform:translateX(-50%);font-family:'Playfair Display',serif;font-size:200px;color:rgba(255,255,255,0.05);line-height:1;}
-  .testimonial-inner{position:relative;max-width:660px;margin:0 auto;}
-  .stars{color:#F4C9D6;font-size:17px;letter-spacing:4px;margin-bottom:26px;}
-  .testimonial p.quote{font-family:'Playfair Display',serif;font-size:clamp(20px,2.8vw,28px);line-height:1.55;font-weight:500;margin-bottom:28px;}
-  .t-author{display:flex;align-items:center;justify-content:center;gap:14px;}
-  .t-author .av{width:44px;height:44px;border-radius:50%;background:var(--primary);display:flex;align-items:center;justify-content:center;font-weight:600;font-family:'Playfair Display',serif;}
-  .t-author b{display:block;font-size:14px;}
-  .t-author span{font-size:12px;color:#c9bcbf;}
-
-  .cta{background:linear-gradient(120deg,var(--primary) 0%,var(--primary-dark) 100%);color:#fff;text-align:center;position:relative;overflow:hidden;}
-  .cta h2{font-size:clamp(28px,4.2vw,44px);font-weight:600;margin-bottom:16px;}
-  .cta p{max-width:520px;margin:0 auto 34px;color:#FBE8ED;font-size:15px;line-height:1.7;}
-  .cta .btn-row{justify-content:center;}
-  .cta .btn-primary{background:#fff;color:var(--primary-dark);}
-  .cta .btn-primary:hover{background:var(--ink);color:#fff;}
-  .cta .btn-ghost{border-color:rgba(255,255,255,0.5);}
-  .contact-strip{display:flex;justify-content:center;gap:44px;margin-top:52px;flex-wrap:wrap;}
-  .contact-strip div{text-align:left;}
-  .contact-strip .lbl{font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:#FBE8ED;opacity:.8;margin-bottom:4px;}
-  .contact-strip .val{font-size:14.5px;font-weight:600;}
-
-  footer{background:var(--ink);color:#cbb9bd;padding:48px 0 24px;}
-  .footer-grid{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:22px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,0.08);}
-  .footer-brand{display:flex;align-items:center;gap:12px;}
-  .footer-brand .brand-name{color:#fff;}
-  .social-row{display:flex;gap:14px;}
-  .social-row a{width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,0.18);display:flex;align-items:center;justify-content:center;font-size:13px;color:#fff;transition:.25s;}
-  .social-row a:hover{background:var(--primary);border-color:var(--primary);}
-  .footer-bottom{display:flex;justify-content:space-between;padding-top:20px;font-size:12px;flex-wrap:wrap;gap:10px;}
-  .footer-bottom .credit{color:#8a7579;}
-  .footer-bottom .credit a{color:#F4C9D6;font-weight:600;}
-
-  .wa-float{position:fixed;bottom:26px;right:26px;z-index:90;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px -8px rgba(37,211,102,0.65);font-size:26px;color:#fff;animation:pulse 2.4s infinite;}
-  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,0.55);}70%{box-shadow:0 0 0 16px rgba(37,211,102,0);}100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}}
+:root{--accent:#B07D62;--accent-d:#7c4f37;--ink:#15161a;--muted:#6b6f76;
+--line:#e9e7e2;--soft:#f7f5f1;--paper:#ffffff;--radius:18px;--maxw:1140px;
+--serif:"Fraunces",Georgia,serif;--sans:"Inter",system-ui,Arial,sans-serif;}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;
+-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.08;letter-spacing:-.02em}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 6vw}
+.eyebrow{font-family:var(--sans);font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+color:var(--accent-d);font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;
+padding:14px 26px;border-radius:40px;font-weight:600;font-size:14.5px;border:none;cursor:pointer;
+transition:transform .25s,box-shadow .25s;box-shadow:0 10px 26px color-mix(in srgb,var(--accent) 38%,transparent)}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent-d)}
+[data-reveal]{opacity:0;transform:translateY(26px)}
+/* utility bar */
+.ubar{background:var(--ink);color:#fff;font-size:12.5px}
+.ubar .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:9px;padding-bottom:9px}
+.ubar a{opacity:.8}.ubar a:hover{opacity:1}
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);
+border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+.brand{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-weight:600;font-size:19px}
+.brand .mk{width:36px;height:36px;border-radius:10px;background:var(--accent);color:#fff;
+display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;
+font-family:var(--sans)}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{font-size:13.5px;color:#444;font-weight:500}
+.nav-links a:hover{color:var(--accent-d)}
+/* hero cover */
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;color:#fff;overflow:hidden}
+.hero .bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.05)}
+.hero .scrim{position:absolute;inset:0;background:linear-gradient(105deg,rgba(15,14,13,.82),rgba(15,14,13,.42) 55%,rgba(15,14,13,.2))}
+.hero .wrap{position:relative;z-index:2;padding-top:90px;padding-bottom:90px}
+.hero .chip{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.35);
+background:rgba(255,255,255,.08);padding:7px 16px;border-radius:30px;font-size:12px;letter-spacing:.18em;
+text-transform:uppercase;margin-bottom:22px}
+.hero h1{font-size:clamp(40px,7vw,76px);max-width:14ch}
+.hero p{font-size:clamp(16px,2.2vw,20px);opacity:.9;max-width:46ch;margin:20px 0 32px}
+.hero .acts{display:flex;gap:14px;flex-wrap:wrap}
+/* hero split */
+.hero-split{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;
+min-height:88vh;padding-top:90px;padding-bottom:60px}
+.hero-split .copy{max-width:540px}
+.hero-split h1{font-size:clamp(36px,5.5vw,62px)}
+.hero-split p{margin:18px 0 30px;color:#555;font-size:16.5px;max-width:44ch}
+.hero-split .media{position:relative}
+.hero-split .media img{width:100%;height:560px;object-fit:cover;border-radius:22px}
+.hero-split .floatchip{position:absolute;left:-18px;bottom:38px;background:#fff;color:var(--ink);
+border-radius:16px;padding:16px 20px;box-shadow:0 18px 40px rgba(0,0,0,.16);font-size:13px}
+.hero-split .floatchip b{font-family:var(--serif);font-size:24px;display:block;color:var(--accent-d)}
+/* section */
+section{padding:96px 0}
+.sec-head{max-width:640px;margin:0 auto 54px;text-align:center}
+.sec-head h2{font-size:clamp(28px,4vw,42px);margin:12px 0 10px}
+.sec-head p{color:var(--muted);font-size:15.5px}
+/* stats */
+.stats{background:var(--soft)}
+.stats .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 24px;text-align:center}
+.stat .n{font-family:var(--serif);font-size:clamp(30px,4vw,42px);color:var(--accent-d)}
+.stat .l{font-size:13px;color:var(--muted);margin-top:6px}
+/* about split */
+.about .grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+.about .media img{width:100%;height:480px;object-fit:cover;border-radius:22px}
+.about h2{font-size:clamp(26px,3.6vw,40px);margin:10px 0 16px}
+.about p{color:#555;margin-bottom:18px}
+.about ul{list-style:none;display:grid;gap:12px}
+.about li{display:flex;gap:12px;align-items:flex-start;font-size:15px}
+.about li::before{content:"✓";color:var(--accent);font-weight:700;margin-top:1px}
+/* services */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 22px;transition:transform .3s,box-shadow .3s,border-color .3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(20,20,30,.10);border-color:transparent}
+.card .ic{width:48px;height:48px;border-radius:13px;background:color-mix(in srgb,var(--accent) 14%,#fff);
+color:var(--accent-d);display:flex;align-items:center;justify-content:center;font-size:19px;margin-bottom:16px;font-weight:700}
+.card h3{font-size:17px;margin-bottom:7px}.card p{font-size:13.5px;color:var(--muted)}
+/* tiles (salon) */
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tile{position:relative;border-radius:20px;overflow:hidden;height:260px;display:flex;align-items:flex-end}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.tile:hover img{transform:scale(1.06)}
+.tile .ov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.6),transparent 55%)}
+.tile .tx{position:relative;z-index:2;padding:20px;color:#fff}
+.tile .tx b{font-family:var(--serif);font-size:20px;display:block}
+/* menu */
+.menu .cats{display:grid;gap:30px}
+.dish{display:flex;justify-content:space-between;gap:20px;padding:18px 0;border-bottom:1px dashed var(--line)}
+.dish .t{font-family:var(--serif);font-size:18px}
+.dish .d{font-size:13.5px;color:var(--muted);max-width:48ch}
+.dish .p{font-weight:700;color:var(--accent-d);white-space:nowrap}
+/* listings */
+.lst{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.prop{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;transition:transform .3s,box-shadow .3s}
+.prop:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(20,20,30,.10)}
+.prop img{width:100%;height:230px;object-fit:cover}
+.prop .b{padding:18px 20px}
+.prop .b h3{font-size:18px}.prop .meta{font-size:13px;color:var(--muted);margin:4px 0 10px}
+.prop .price{font-family:var(--serif);font-size:22px;color:var(--accent-d)}
+.prop .loc{font-size:12.5px;color:var(--muted)}
+/* pricing */
+.price{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tier{border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;background:#fff;position:relative}
+.tier.feat{border-color:var(--accent);box-shadow:0 20px 44px color-mix(in srgb,var(--accent) 20%,transparent)}
+.tier .tag{position:absolute;top:-12px;left:26px;background:var(--accent);color:#fff;font-size:11px;
+font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:20px}
+.tier h3{font-size:20px}.tier .pp{font-family:var(--serif);font-size:34px;color:var(--accent-d);margin:8px 0}
+.tier .pp span{font-size:14px;color:var(--muted)}
+.tier ul{list-style:none;display:grid;gap:10px;margin:14px 0 22px;font-size:14px}
+.tier li::before{content:"•";color:var(--accent);margin-right:8px}
+/* portfolio */
+.pf{columns:3;column-gap:16px}
+.pf img{width:100%;border-radius:16px;margin-bottom:16px;break-inside:avoid}
+/* subjects */
+.subj{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.subj .s{border:1px solid var(--line);border-radius:16px;padding:22px;background:#fff}
+.subj .s b{font-family:var(--serif);font-size:17px;display:block;margin-bottom:5px}
+.subj .s span{font-size:13.5px;color:var(--muted)}
+/* products */
+.prod{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.prod .p{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff}
+.prod .p img{width:100%;height:200px;object-fit:cover}
+.prod .p .b{padding:16px}.prod .p .b b{font-family:var(--serif);font-size:16px;display:block}
+.prod .p .b span{font-size:13px;color:var(--muted)}
+/* gallery */
+.gal{background:var(--ink);color:#fff}
+.gal .sec-head h2{color:#fff}.gal .sec-head p{color:rgba(255,255,255,.6)}
+.gal .sec-head .eyebrow{color:var(--accent)}
+.galgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.galgrid img{width:100%;height:260px;object-fit:cover;border-radius:16px;transition:transform .5s}
+.galgrid img:hover{transform:scale(1.04)}
+/* testimonials */
+.testi .wrap{max-width:760px;text-align:center}
+.testi blockquote{font-family:var(--serif);font-size:clamp(20px,3vw,30px);line-height:1.35}
+.testi .who{margin-top:18px;color:var(--muted);font-size:14px;font-weight:600}
+.dots{display:flex;gap:8px;justify-content:center;margin-top:24px}
+.dots span{width:7px;height:7px;border-radius:50%;background:#d8d6d0}
+.dots span.on{background:var(--accent);width:22px;border-radius:4px}
+/* contact */
+.contact{background:var(--soft)}
+.contact .box{background:#fff;border:1px solid var(--line);border-radius:24px;padding:48px;
+display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.contact h2{font-size:clamp(26px,3.5vw,38px)}
+.contact p{color:#555;margin:14px 0 24px}
+.contact .info{display:grid;gap:14px}
+.contact .info a{display:flex;align-items:center;gap:12px;background:var(--soft);border:1px solid var(--line);
+border-radius:14px;padding:14px 18px;font-size:14.5px;font-weight:600}
+.contact .info a:hover{border-color:var(--accent);color:var(--accent-d)}
+.contact .info .i{width:34px;height:34px;border-radius:9px;background:color-mix(in srgb,var(--accent) 14%,#fff);
+color:var(--accent-d);display:flex;align-items:center;justify-content:center}
+/* footer */
+.foot{background:var(--ink);color:rgba(255,255,255,.7);text-align:center;padding:26px 6vw;font-size:13px}
+.foot b{color:#fff}
+.fwa{position:fixed;right:22px;bottom:22px;z-index:60;width:56px;height:56px;border-radius:50%;
+background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;
+box-shadow:0 10px 30px rgba(37,211,102,.5)}
+.fwa .ring{position:absolute;inset:-6px;border-radius:50%;border:2px solid #25D366;animation:pr 2s ease-out infinite}
+@keyframes pr{0%{transform:scale(.9);opacity:.7}100%{transform:scale(1.6);opacity:0}}
+@media(max-width:900px){
+ .stats .grid{grid-template-columns:repeat(2,1fr)}
+ .cards,.tiles,.subj,.prod,.galgrid{grid-template-columns:repeat(2,1fr)}
+ .lst,.price,.about .grid,.contact .box,.hero-split{grid-template-columns:1fr}
+ .hero-split .media img{height:360px}
+ .pf{columns:2}
+ .nav-links a:not(.cta){display:none}
+}
+@media(max-width:560px){
+ .cards,.tiles,.subj,.prod,.galgrid,.stats .grid{grid-template-columns:1fr}
+ .pf{columns:1}
+ section{padding:68px 0}
+ .ubar .wrap{font-size:11px}
+}
 </style>
 </head>
 <body>
-
-<header id="siteHeader">
-  <nav>
-    <div class="brand">
-      <div class="brand-mark">QP</div>
-      <div class="brand-name">Q Point Translation Typing and Copy Center<span>Salmiya (also branches in Abbasiya, Mangaf, Hawally, Khaitan) · KUWAIT</span></div>
-    </div>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#services">What We Do</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#testimonials">Reviews</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <a class="nav-cta" href="https://wa.me/96566807575" target="_blank" rel="noopener">Get In Touch →</a>
-    <button class="nav-toggle" aria-label="menu">☰</button>
-  </nav>
+<div class="ubar"><div class="wrap"><span>&#9733; Free concept demo by KB Rewaq Digital</span><span><a href="https://wa.me/96566807575">WhatsApp +965 6680 7575</a> &nbsp;·&nbsp; <a href="https://instagram.com/qpointkuwait">@qpointkuwait</a></span></div></div>
+<nav class="nav"><div class="wrap"><div class="brand"><span class="mk">QP</span>Q Point Translation Typing and Copy Center</div>
+<div class="nav-links"><a href="#about">About</a><a href="#services">Services</a><a href="#contact">Contact</a><a class="btn" href="https://wa.me/96566807575">Book Now</a></div></div></nav>
+<header class="hero-split wrap">
+  <div class="copy" data-reveal>
+    <span class="eyebrow">&#9733; Translation & Typing Center &middot; Salmiya (also branches in Abbasiya, Mangaf, Hawally, Khaitan)</span>
+    <h1>Every Document,<br>Handled Right</h1>
+    <p>Reliable help, done right the first time — across {area}.</p>
+    <div class="acts"><a class="btn" href="https://wa.me/96566807575">Get Started</a><a class="btn ghost" href="#about">Explore &#8595;</a></div>
+  </div>
+  <div class="media" data-reveal>
+    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="Q Point Translation Typing and Copy Center">
+    <div class="floatchip"><b>Salmiya (also branches in Abbasiya, Mangaf, Hawally, Khaitan)</b>based &amp; trusted</div>
+  </div>
 </header>
-
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="wrap">
-    <div class="hero-content">
-      <div class="eyebrow">Local Business · Salmiya (also branches in Abbasiya, Mangaf, Hawally, Khaitan)</div>
-      <h1>Every Document,  <em>Handled Right</em></h1>
-      <p>Q Point Translation Typing and Copy Center is a trusted business in Salmiya (also branches in Abbasiya, Mangaf, Hawally, Khaitan), dedicated to delivering excellent service and building lasting relationships with every customer. Reliable service, done right — every single time.</p>
-      <div class="btn-row">
-        <a class="btn btn-primary" href="https://wa.me/96566807575" target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
-        <a class="btn btn-ghost" href="#services">Learn More</a>
-      </div>
-    </div>
+<section class="stats"><div class="wrap"><div class="grid"><div class="stat" data-reveal><div class="n">1500+</div><div class="l">Jobs Done</div></div><div class="stat" data-reveal><div class="n">3</div><div class="l">Years In Salmiya (also branches in Abbasiya, Mangaf, Hawally, Khaitan)</div></div><div class="stat" data-reveal><div class="n">4.8</div><div class="l">Service Rating</div></div><div class="stat" data-reveal><div class="n">24h</div><div class="l">Response</div></div></div></div></section>
+<section class="about" id="about"><div class="wrap"><div class="grid">
+  <div class="media" data-reveal><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" alt="Q Point Translation Typing and Copy Center"></div>
+  <div data-reveal>
+    <span class="eyebrow">About Q Point Translation Typing and Copy Center</span>
+    <h2>Why Q Point Translation Typing and Copy Center?</h2>
+    <p>Q Point Translation Typing and Copy Center is a Salmiya (also branches in Abbasiya, Mangaf, Hawally, Khaitan) service business built on trust — fast response, fair pricing and work that's guaranteed. One call, and it's handled.</p>
+    <ul><li><span>Expert Service</span></li><li><span>On-Site</span></li><li><span>Fair Pricing</span></li><li><span>Guaranteed</span></li></ul>
   </div>
-  <div class="hero-stats">
-    <div class="wrap">
-      <div class="stat"><b>5</b><span>Years in Salmiya (also branches in Abbasiya, Mangaf, Hawally, Khaitan)</span></div>
-      <div class="stat"><b>4.8 ★</b><span>Customer Rating</span></div>
-      <div class="stat"><b>500+</b><span>Happy Customers</span></div>
-      <div class="stat"><b>24H</b><span>Response Time</span></div>
-    </div>
+</div></div></section>
+<section id="services"><div class="wrap">
+  <div class="sec-head" data-reveal><span class="eyebrow">What We Offer</span><h2>Our Services</h2><p>A closer look at what Q Point Translation Typing and Copy Center brings to the table.</p></div>
+  <div class="cards"><div class="card" data-reveal><div class="ic">◈</div><h3>Expert Service</h3><p>Skilled, vetted technicians.</p></div><div class="card" data-reveal><div class="ic">◈</div><h3>On-Site</h3><p>We come to you.</p></div><div class="card" data-reveal><div class="ic">◈</div><h3>Fair Pricing</h3><p>Upfront, no surprises.</p></div><div class="card" data-reveal><div class="ic">◈</div><h3>Guaranteed</h3><p>Work we stand behind.</p></div></div>
+</div></section>
+
+<section class="gal"><div class="wrap"><div class="sec-head" data-reveal><span class="eyebrow">Gallery</span><h2>Inside Q Point Translation Typing and Copy Center</h2><p>A look at the space, the team and the work.</p></div><div class="galgrid"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="" data-reveal><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="" data-reveal><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80" alt="" data-reveal><img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=800&q=80" alt="" data-reveal><img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=800&q=80" alt="" data-reveal><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="" data-reveal></div></div></section>
+<section class="testi"><div class="wrap"><div class="tslide" style="display:block" data-reveal><blockquote>"Q Point Translation Typing and Copy Center made the whole experience effortless — I wouldn't go anywhere else in Salmiya (also branches in Abbasiya, Mangaf, Hawally, Khaitan)."</blockquote><div class="who">&mdash; Happy Customer, Salmiya (also branches in Abbasiya, Mangaf, Hawally, Khaitan)</div></div><div class="tslide" style="display:none" data-reveal><blockquote>Genuinely the best service I've had locally. Q Point Translation Typing and Copy Center cares about the details."</blockquote><div class="who">&mdash; Happy Customer, Salmiya (also branches in Abbasiya, Mangaf, Hawally, Khaitan)</div></div><div class="tslide" style="display:none" data-reveal><blockquote>Professional, friendly and consistent every single time. Highly recommended."</blockquote><div class="who">&mdash; Happy Customer, Salmiya (also branches in Abbasiya, Mangaf, Hawally, Khaitan)</div></div><div class="dots"><span class="on"></span><span class=""></span><span class=""></span></div></div></section>
+<section class="contact" id="contact"><div class="wrap"><div class="box">
+  <div data-reveal><span class="eyebrow">Get In Touch</span><h2>Visit or reach Q Point Translation Typing and Copy Center</h2>
+  <p>Based in Salmiya (also branches in Abbasiya, Mangaf, Hawally, Khaitan), Kuwait. Message us anytime — we'd love to help.</p>
+  <a class="btn" href="https://wa.me/96566807575">Message on WhatsApp</a></div>
+  <div class="info" data-reveal>
+    <a href="https://wa.me/96566807575"><span class="i">&#9993;</span> WhatsApp: +965 6680 7575</a>
+    <a href="https://instagram.com/qpointkuwait"><span class="i">&#9737;</span> Instagram: @qpointkuwait</a>
+    <a href="#"><span class="i">&#9678;</span> Location: Salmiya (also branches in Abbasiya, Mangaf, Hawally, Khaitan), Kuwait</a>
   </div>
-</section>
-
-<section class="about" id="about">
-  <div class="wrap about-grid">
-    <div class="about-imgs reveal">
-      <img class="img-back" src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=900&q=80" alt="Q Point Translation Typing and Copy Center">
-      <img class="img-front" src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=700&q=80" alt="Q Point Translation Typing and Copy Center">
-    </div>
-    <div class="about-copy reveal">
-      <div class="eyebrow">About Us</div>
-      <h2>A name you can trust</h2>
-      <p>Q Point Translation Typing and Copy Center is a trusted business in Salmiya (also branches in Abbasiya, Mangaf, Hawally, Khaitan), dedicated to delivering excellent service and building lasting relationships with every customer.</p>
-      <div class="feature-list">
-        <div class="feature"><div class="ico">✓</div><div><b>Reliable Service</b><span>Consistent quality, every time</span></div></div>
-        <div class="feature"><div class="ico">✓</div><div><b>Experienced Team</b><span>Skilled professionals you can trust</span></div></div>
-        <div class="feature"><div class="ico">✓</div><div><b>Great Value</b><span>Fair pricing, honest work</span></div></div>
-        <div class="feature"><div class="ico">✓</div><div><b>Easy Contact</b><span>Reach us instantly via WhatsApp</span></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="services" id="services">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow">What We Do</div>
-      <h2>Quality you can trust</h2>
-      <p>Reliable service, done right — every single time.</p>
-    </div>
-    <div class="service-grid">
-      <div class="service-card reveal"><span class="num">01</span><h3>Quality Service</h3><p>Consistently high standards in everything we do.</p></div>
-      <div class="service-card reveal"><span class="num">02</span><h3>Customer Satisfaction</h3><p>Your experience is always our top priority.</p></div>
-      <div class="service-card reveal"><span class="num">03</span><h3>Professional Team</h3><p>A skilled, dedicated team behind every service.</p></div>
-      <div class="service-card reveal"><span class="num">04</span><h3>Trusted by Locals</h3><p>A name the community relies on.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="gallery" id="gallery">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow">Take A Look</div>
-      <h2>A look at our work</h2>
-    </div>
-    <div class="gallery-grid reveal">
-      <div class="g-item"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80" alt="Q Point Translation Typing and Copy Center"></div>
-      <div class="g-item"><img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=700&q=80" alt="Q Point Translation Typing and Copy Center"></div>
-      <div class="g-item"><img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=700&q=80" alt="Q Point Translation Typing and Copy Center"></div>
-      <div class="g-item"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=700&q=80" alt="Q Point Translation Typing and Copy Center"></div>
-      <div class="g-item"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=700&q=80" alt="Q Point Translation Typing and Copy Center"></div>
-    </div>
-  </div>
-</section>
-
-<section class="testimonial" id="testimonials">
-  <div class="wrap testimonial-inner reveal">
-    <div class="stars">★★★★★</div>
-    <p class="quote">Reliable, professional, and always a pleasure to work with.</p>
-    <div class="t-author">
-      <div class="av">K</div>
-      <div><b>Khalid Al-Salem</b><span>Salmiya (also branches in Abbasiya, Mangaf, Hawally, Khaitan), Kuwait</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="cta" id="contact">
-  <div class="wrap reveal">
-    <div class="eyebrow" style="justify-content:center;color:#FBE8ED;">Ready When You Are</div>
-    <h2>Let's get started</h2>
-    <p>Message us on WhatsApp — we'll get back to you the same day.</p>
-    <div class="btn-row">
-      <a class="btn btn-primary" href="https://wa.me/96566807575" target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
-      <a class="btn btn-ghost" href="https://instagram.com/qpointkuwait" target="_blank" rel="noopener">📷 @qpointkuwait</a>
-    </div>
-    <div class="contact-strip">
-      <div><div class="lbl">Location</div><div class="val">Salmiya (also branches in Abbasiya, Mangaf, Hawally, Khaitan), Kuwait</div></div>
-      <div><div class="lbl">Phone</div><div class="val">+965 6680 7575</div></div>
-      <div><div class="lbl">Hours</div><div class="val">Sun–Thu · 9AM – 6PM</div></div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="brand-mark">QP</div>
-        <div class="brand-name">Q Point Translation Typing and Copy Center</div>
-      </div>
-      <div class="social-row">
-        <a href="https://instagram.com/qpointkuwait" target="_blank" rel="noopener">IG</a>
-        <a href="https://wa.me/96566807575" target="_blank" rel="noopener">WA</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span style="color:#8a7579;">© 2026 Q Point Translation Typing and Copy Center. All rights reserved.</span>
-      <span class="credit">Demo by <a href="https://kb-rewaq-digital.web.app" target="_blank" rel="noopener">KB Rewaq Digital</a> — websites, content &amp; automation for Kuwait businesses &middot; <a href="https://kb-rewaq-digital.web.app" target="_blank" rel="noopener">kb-rewaq-digital.web.app</a> &middot; <a href="https://wa.me/96550703252" target="_blank" rel="noopener">WhatsApp +965 5070 3252</a></span>
-    </div>
-  </div>
-</footer>
-
-<a class="wa-float" href="https://wa.me/96566807575" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
-
+</div></div></section>
+<footer class="foot">This is a <b>free concept demo</b> by <b>KB Rewaq Digital</b> showing Q Point Translation Typing and Copy Center what a modern website could look like. Interested? WhatsApp <b>+965 5070 3252</b>.</footer>
+<a class="fwa" href="https://wa.me/96566807575"><div class="ring"></div>&#9993;</a>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>
-  const toggle = document.querySelector('.nav-toggle');
-  const links = document.querySelector('.nav-links');
-  toggle.addEventListener('click', () => {
-    const open = links.style.display === 'flex';
-    links.style.display = open ? 'none' : 'flex';
-    links.style.cssText += 'position:absolute;top:100%;left:0;right:0;background:#FAF7F5;flex-direction:column;padding:20px 32px;gap:18px;box-shadow:0 12px 20px -10px rgba(0,0,0,0.1);';
-  });
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
-  }, { threshold: 0.15 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-  const header = document.getElementById('siteHeader');
-  window.addEventListener('scroll', () => {
-    header.style.boxShadow = window.scrollY > 20 ? '0 6px 20px -10px rgba(32,25,27,0.15)' : 'none';
-  });
+(function(){
+ var els=document.querySelectorAll('[data-reveal]');
+ if(!window.gsap){els.forEach(function(e){e.style.opacity=1;e.style.transform='none';});return;}
+ gsap.registerPlugin(ScrollTrigger);
+ gsap.utils.toArray('[data-reveal]').forEach(function(el){
+   gsap.to(el,{opacity:1,y:0,duration:.9,ease:'power3.out',
+     scrollTrigger:{trigger:el,start:'top 85%'}});
+ });
+ document.querySelectorAll('[data-par]').forEach(function(el){
+   gsap.to(el,{yPercent:-12,ease:'none',scrollTrigger:{trigger:el,scrub:true,start:'top bottom',end:'bottom top'}});
+ });
+ document.querySelectorAll('[data-count]').forEach(function(el){
+   var t=parseFloat(el.getAttribute('data-count'));
+   var dec=(el.getAttribute('data-dec')==='1');
+   var obj={v:0};
+   ScrollTrigger.create({trigger:el,start:'top 88%',once:true,onEnter:function(){
+     gsap.to(obj,{v:t,duration:1.6,ease:'power2.out',onUpdate:function(){
+       el.textContent=(dec?obj.v.toFixed(1):Math.round(obj.v))+(el.getAttribute('data-suf')||'');
+     }});
+   }});
+ });
+ var slides=document.querySelectorAll('.tslide'),dots=document.querySelectorAll('.dots span'),i=0;
+ if(slides.length){
+   setInterval(function(){slides[i].style.display='none';dots[i]&&dots[i].classList.remove('on');
+     i=(i+1)%slides.length;slides[i].style.display='block';dots[i]&&dots[i].classList.add('on');},4800);
+ }
+ var nav=document.querySelector('.nav');
+ window.addEventListener('scroll',function(){nav.style.boxShadow=(window.scrollY>20)?'0 6px 20px rgba(0,0,0,.06)':'none';});
+})();
 </script>
-
-</body>
-</html>
+</body></html>
