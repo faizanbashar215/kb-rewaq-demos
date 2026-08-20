@@ -28,7 +28,17 @@ transition:transform .25s,box-shadow .25s;box-shadow:0 10px 26px color-mix(in sr
 .btn:hover{transform:translateY(-2px)}
 .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
 .btn.ghost:hover{border-color:var(--accent);color:var(--accent-d)}
-[data-reveal]{opacity:0;transform:translateY(26px)}
+.js [data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.js [data-reveal].in{opacity:1;transform:none}
+/* marquee strip */
+.marquee{background:var(--accent);color:#fff;overflow:hidden;white-space:nowrap;padding:13px 0;font-size:13.5px;letter-spacing:.03em}
+.marquee .track{display:inline-block;padding-left:100%;animation:mrq 28s linear infinite}
+.marquee .track span{margin:0 26px;opacity:.95}
+.marquee .track b{font-family:var(--serif);font-weight:600}
+@keyframes mrq{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+/* hero accent glow */
+.hero .scrim{background:linear-gradient(115deg,rgba(15,14,13,.86),rgba(15,14,13,.5) 52%,rgba(15,14,13,.28)),radial-gradient(120% 120% at 86% 8%,color-mix(in srgb,var(--accent) 32%,transparent),transparent 60%)}
+.hero .chip{backdrop-filter:blur(4px)}
 /* utility bar */
 .ubar{background:var(--ink);color:#fff;font-size:12.5px}
 .ubar .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:9px;padding-bottom:9px}
@@ -201,13 +211,14 @@ box-shadow:0 10px 30px rgba(37,211,102,.5)}
     <div class="acts"><a class="btn" href="https://wa.me/66633085">Get Started</a><a class="btn ghost" href="#about">Explore &#8595;</a></div>
   </div>
   <div class="media" data-reveal>
-    <img src="https://loremflickr.com/800/600/technician,repair,cleaning?lock=738471" alt="H2O Cleaning Company">
+    <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=800&q=80" alt="H2O Cleaning Company">
     <div class="floatchip"><b>Hawalli</b>based &amp; trusted</div>
   </div>
 </header>
+<div class="marquee"><div class="track"><span>&#9670; H2O Cleaning Company</span><span>&#9670; Cleaning Services in Hawalli</span><span>&#9670; Book on WhatsApp</span><span>&#9670; Trusted in Kuwait</span><span>&#9670; Local Services</span><span>&#9670; H2O Cleaning Company</span><span>&#9670; Cleaning Services in Hawalli</span><span>&#9670; Book on WhatsApp</span><span>&#9670; Trusted in Kuwait</span><span>&#9670; Local Services</span></div></div>
 <section class="stats"><div class="wrap"><div class="grid"><div class="stat" data-reveal><div class="n">1500+</div><div class="l">Jobs Done</div></div><div class="stat" data-reveal><div class="n">3</div><div class="l">Years In Hawalli</div></div><div class="stat" data-reveal><div class="n">4.8</div><div class="l">Service Rating</div></div><div class="stat" data-reveal><div class="n">24h</div><div class="l">Response</div></div></div></div></section>
 <section class="about" id="about"><div class="wrap"><div class="grid">
-  <div class="media" data-reveal><img src="https://loremflickr.com/800/600/technician,repair,cleaning?lock=740489" alt="H2O Cleaning Company"></div>
+  <div class="media" data-reveal><img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80" alt="H2O Cleaning Company"></div>
   <div data-reveal>
     <span class="eyebrow">About H2O Cleaning Company</span>
     <h2>Why H2O Cleaning Company?</h2>
@@ -220,7 +231,7 @@ box-shadow:0 10px 30px rgba(37,211,102,.5)}
   <div class="cards"><div class="card" data-reveal><div class="ic">◈</div><h3>Expert Service</h3><p>Skilled, vetted technicians.</p></div><div class="card" data-reveal><div class="ic">◈</div><h3>On-Site</h3><p>We come to you.</p></div><div class="card" data-reveal><div class="ic">◈</div><h3>Fair Pricing</h3><p>Upfront, no surprises.</p></div><div class="card" data-reveal><div class="ic">◈</div><h3>Guaranteed</h3><p>Work we stand behind.</p></div></div>
 </div></section>
 
-<section class="gal"><div class="wrap"><div class="sec-head" data-reveal><span class="eyebrow">Gallery</span><h2>Inside H2O Cleaning Company</h2><p>A look at the space, the team and the work.</p></div><div class="galgrid"><img src="https://loremflickr.com/800/600/technician,repair,cleaning?lock=747552" alt="" data-reveal><img src="https://loremflickr.com/800/600/technician,repair,cleaning?lock=748561" alt="" data-reveal><img src="https://loremflickr.com/800/600/technician,repair,cleaning?lock=749570" alt="" data-reveal><img src="https://loremflickr.com/800/600/technician,repair,cleaning?lock=750579" alt="" data-reveal><img src="https://loremflickr.com/800/600/technician,repair,cleaning?lock=751588" alt="" data-reveal><img src="https://loremflickr.com/800/600/technician,repair,cleaning?lock=752597" alt="" data-reveal></div></div></section>
+<section class="gal"><div class="wrap"><div class="sec-head" data-reveal><span class="eyebrow">Gallery</span><h2>Inside H2O Cleaning Company</h2><p>A look at the space, the team and the work.</p></div><div class="galgrid"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="" data-reveal><img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80" alt="" data-reveal><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80" alt="" data-reveal><img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=800&q=80" alt="" data-reveal><img src="https://images.unsplash.com/photo-1590479773265-7464e5d48118?auto=format&fit=crop&w=800&q=80" alt="" data-reveal><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" alt="" data-reveal></div></div></section>
 <section class="testi"><div class="wrap"><div class="tslide" style="display:block" data-reveal><blockquote>"H2O Cleaning Company made the whole experience effortless — I wouldn't go anywhere else in Hawalli."</blockquote><div class="who">&mdash; Happy Customer, Hawalli</div></div><div class="tslide" style="display:none" data-reveal><blockquote>Genuinely the best service I've had locally. H2O Cleaning Company cares about the details."</blockquote><div class="who">&mdash; Happy Customer, Hawalli</div></div><div class="tslide" style="display:none" data-reveal><blockquote>Professional, friendly and consistent every single time. Highly recommended."</blockquote><div class="who">&mdash; Happy Customer, Hawalli</div></div><div class="dots"><span class="on"></span><span class=""></span><span class=""></span></div></div></section>
 <section class="contact" id="contact"><div class="wrap"><div class="box">
   <div data-reveal><span class="eyebrow">Get In Touch</span><h2>Visit or reach H2O Cleaning Company</h2>
@@ -234,37 +245,27 @@ box-shadow:0 10px 30px rgba(37,211,102,.5)}
 </div></div></section>
 <footer class="foot">This is a <b>free concept demo</b> by <b>KB Rewaq Digital</b> showing H2O Cleaning Company what a modern website could look like. Interested? WhatsApp <b>+965 5070 3252</b>.</footer>
 <a class="fwa" href="https://wa.me/66633085"><div class="ring"></div>&#9993;</a>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>
 (function(){
- var els=document.querySelectorAll('[data-reveal]');
- if(!window.gsap){els.forEach(function(e){e.style.opacity=1;e.style.transform='none';});return;}
- gsap.registerPlugin(ScrollTrigger);
- gsap.utils.toArray('[data-reveal]').forEach(function(el){
-   gsap.to(el,{opacity:1,y:0,duration:.9,ease:'power3.out',
-     scrollTrigger:{trigger:el,start:'top 85%'}});
- });
- document.querySelectorAll('[data-par]').forEach(function(el){
-   gsap.to(el,{yPercent:-12,ease:'none',scrollTrigger:{trigger:el,scrub:true,start:'top bottom',end:'bottom top'}});
- });
- document.querySelectorAll('[data-count]').forEach(function(el){
-   var t=parseFloat(el.getAttribute('data-count'));
-   var dec=(el.getAttribute('data-dec')==='1');
-   var obj={v:0};
-   ScrollTrigger.create({trigger:el,start:'top 88%',once:true,onEnter:function(){
-     gsap.to(obj,{v:t,duration:1.6,ease:'power2.out',onUpdate:function(){
-       el.textContent=(dec?obj.v.toFixed(1):Math.round(obj.v))+(el.getAttribute('data-suf')||'');
-     }});
-   }});
- });
- var slides=document.querySelectorAll('.tslide'),dots=document.querySelectorAll('.dots span'),i=0;
- if(slides.length){
-   setInterval(function(){slides[i].style.display='none';dots[i]&&dots[i].classList.remove('on');
-     i=(i+1)%slides.length;slides[i].style.display='block';dots[i]&&dots[i].classList.add('on');},4800);
- }
- var nav=document.querySelector('.nav');
- window.addEventListener('scroll',function(){nav.style.boxShadow=(window.scrollY>20)?'0 6px 20px rgba(0,0,0,.06)':'none';});
+  document.documentElement.classList.add('js');
+  var rev=document.querySelectorAll('[data-reveal]');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+    rev.forEach(function(el){io.observe(el);});
+  } else { rev.forEach(function(el){el.classList.add('in');}); }
+  document.querySelectorAll('[data-count]').forEach(function(el){
+    var t=parseFloat(el.getAttribute('data-count'));if(isNaN(t))return;
+    var dec=el.getAttribute('data-dec')==='1',suf=el.getAttribute('data-suf')||'',s=0,step=t/45;
+    var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){
+      var tm=setInterval(function(){s+=step;if(s>=t){s=t;clearInterval(tm);}el.textContent=(dec?s.toFixed(1):Math.round(s))+suf;},26);io2.unobserve(e.target);}});},{threshold:.5});
+    io2.observe(el);
+  });
+  var slides=document.querySelectorAll('.tslide'),dots=document.querySelectorAll('.dots span'),i=0;
+  if(slides.length){slides.forEach(function(s,idx){s.style.display=idx===0?'block':'none';});
+    setInterval(function(){slides[i].style.display='none';dots[i]&&dots[i].classList.remove('on');
+      i=(i+1)%slides.length;slides[i].style.display='block';dots[i]&&dots[i].classList.add('on');},5000);}
+  var nav=document.querySelector('.nav');
+  if(nav){window.addEventListener('scroll',function(){nav.style.boxShadow=(window.scrollY>20)?'0 6px 20px rgba(0,0,0,.06)':'none';});}
 })();
 </script>
 </body></html>

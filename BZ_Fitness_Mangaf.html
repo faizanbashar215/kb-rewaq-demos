@@ -28,7 +28,17 @@ transition:transform .25s,box-shadow .25s;box-shadow:0 10px 26px color-mix(in sr
 .btn:hover{transform:translateY(-2px)}
 .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
 .btn.ghost:hover{border-color:var(--accent);color:var(--accent-d)}
-[data-reveal]{opacity:0;transform:translateY(26px)}
+.js [data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.js [data-reveal].in{opacity:1;transform:none}
+/* marquee strip */
+.marquee{background:var(--accent);color:#fff;overflow:hidden;white-space:nowrap;padding:13px 0;font-size:13.5px;letter-spacing:.03em}
+.marquee .track{display:inline-block;padding-left:100%;animation:mrq 28s linear infinite}
+.marquee .track span{margin:0 26px;opacity:.95}
+.marquee .track b{font-family:var(--serif);font-weight:600}
+@keyframes mrq{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+/* hero accent glow */
+.hero .scrim{background:linear-gradient(115deg,rgba(15,14,13,.86),rgba(15,14,13,.5) 52%,rgba(15,14,13,.28)),radial-gradient(120% 120% at 86% 8%,color-mix(in srgb,var(--accent) 32%,transparent),transparent 60%)}
+.hero .chip{backdrop-filter:blur(4px)}
 /* utility bar */
 .ubar{background:var(--ink);color:#fff;font-size:12.5px}
 .ubar .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:9px;padding-bottom:9px}
@@ -215,13 +225,14 @@ box-shadow:0 10px 30px rgba(37,211,102,.5)}
     <div class="acts"><a class="btn" href="https://wa.me/96500000000">Get Started</a><a class="btn ghost" href="#about">Explore &#8595;</a></div>
   </div>
   <div class="media" data-reveal>
-    <img src="https://loremflickr.com/800/600/gym,fitness,workout?lock=438754" alt="BZ Fitness Mangaf">
+    <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=800&q=80" alt="BZ Fitness Mangaf">
     <div class="floatchip"><b>Mangaf</b>based &amp; trusted</div>
   </div>
 </header>
+<div class="marquee"><div class="track"><span>&#9670; BZ Fitness Mangaf</span><span>&#9670; Gym in Mangaf</span><span>&#9670; Book on WhatsApp</span><span>&#9670; Trusted in Kuwait</span><span>&#9670; Fitness & Gym</span><span>&#9670; BZ Fitness Mangaf</span><span>&#9670; Gym in Mangaf</span><span>&#9670; Book on WhatsApp</span><span>&#9670; Trusted in Kuwait</span><span>&#9670; Fitness & Gym</span></div></div>
 <section class="stats"><div class="wrap"><div class="grid"><div class="stat" data-reveal><div class="n">1000+</div><div class="l">Members</div></div><div class="stat" data-reveal><div class="n">3</div><div class="l">Years In Mangaf</div></div><div class="stat" data-reveal><div class="n">40+</div><div class="l">Weekly Classes</div></div><div class="stat" data-reveal><div class="n">1:1</div><div class="l">Coaching</div></div></div></div></section>
 <section id="about"><div class="wrap"><div class="about"><div class="grid">
-  <div class="media" data-reveal><img src="https://loremflickr.com/800/600/gym,fitness,workout?lock=440772" alt=""></div>
+  <div class="media" data-reveal><img src="https://images.unsplash.com/photo-1554284126-aa88f22d8b74?auto=format&fit=crop&w=800&q=80" alt=""></div>
   <div data-reveal>
     <span class="eyebrow">About BZ Fitness Mangaf</span>
     <h2>Fitness &amp; Gym in Mangaf</h2>
@@ -256,7 +267,7 @@ box-shadow:0 10px 30px rgba(37,211,102,.5)}
   <div class="wb good"><span class="lab">&#10003; Our rebuild</span><p>Update copyright and keep content current</p></div>
 </div></div>
 </div></section>
-<section class="gal"><div class="wrap"><div class="sec-head" data-reveal><span class="eyebrow">Gallery</span><h2>Inside BZ Fitness Mangaf</h2><p>A look at the space, the team and the work.</p></div><div class="galgrid"><img src="https://loremflickr.com/800/600/gym,fitness,workout?lock=447835" alt="" data-reveal><img src="https://loremflickr.com/800/600/gym,fitness,workout?lock=448844" alt="" data-reveal><img src="https://loremflickr.com/800/600/gym,fitness,workout?lock=449853" alt="" data-reveal><img src="https://loremflickr.com/800/600/gym,fitness,workout?lock=450862" alt="" data-reveal><img src="https://loremflickr.com/800/600/gym,fitness,workout?lock=451871" alt="" data-reveal><img src="https://loremflickr.com/800/600/gym,fitness,workout?lock=452880" alt="" data-reveal></div></div></section>
+<section class="gal"><div class="wrap"><div class="sec-head" data-reveal><span class="eyebrow">Gallery</span><h2>Inside BZ Fitness Mangaf</h2><p>A look at the space, the team and the work.</p></div><div class="galgrid"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=800&q=80" alt="" data-reveal><img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=800&q=80" alt="" data-reveal><img src="https://images.unsplash.com/photo-1554284126-aa88f22d8b74?auto=format&fit=crop&w=800&q=80" alt="" data-reveal><img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&w=800&q=80" alt="" data-reveal><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80" alt="" data-reveal><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="" data-reveal></div></div></section>
 <section class="testi"><div class="wrap"><div class="tslide" style="display:block" data-reveal><blockquote>"BZ Fitness Mangaf made the whole experience effortless — I wouldn't go anywhere else in Mangaf."</blockquote><div class="who">&mdash; Happy Customer, Mangaf</div></div><div class="tslide" style="display:none" data-reveal><blockquote>Genuinely the best service I've had locally. BZ Fitness Mangaf cares about the details."</blockquote><div class="who">&mdash; Happy Customer, Mangaf</div></div><div class="tslide" style="display:none" data-reveal><blockquote>Professional, friendly and consistent every single time. Highly recommended."</blockquote><div class="who">&mdash; Happy Customer, Mangaf</div></div><div class="dots"><span class="on"></span><span class=""></span><span class=""></span></div></div></section>
 <section class="contact" id="contact"><div class="wrap"><div class="box">
   <div data-reveal><span class="eyebrow">Get In Touch</span><h2>Visit or reach BZ Fitness Mangaf</h2>
@@ -270,37 +281,27 @@ box-shadow:0 10px 30px rgba(37,211,102,.5)}
 </div></div></section>
 <footer class="foot">This is a <b>free concept demo</b> by <b>KB Rewaq Digital</b> showing BZ Fitness Mangaf what a modern website could look like. Interested? WhatsApp <b>+965 5070 3252</b>.</footer>
 <a class="fwa" href="https://wa.me/96500000000"><div class="ring"></div>&#9993;</a>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>
 (function(){
- var els=document.querySelectorAll('[data-reveal]');
- if(!window.gsap){els.forEach(function(e){e.style.opacity=1;e.style.transform='none';});return;}
- gsap.registerPlugin(ScrollTrigger);
- gsap.utils.toArray('[data-reveal]').forEach(function(el){
-   gsap.to(el,{opacity:1,y:0,duration:.9,ease:'power3.out',
-     scrollTrigger:{trigger:el,start:'top 85%'}});
- });
- document.querySelectorAll('[data-par]').forEach(function(el){
-   gsap.to(el,{yPercent:-12,ease:'none',scrollTrigger:{trigger:el,scrub:true,start:'top bottom',end:'bottom top'}});
- });
- document.querySelectorAll('[data-count]').forEach(function(el){
-   var t=parseFloat(el.getAttribute('data-count'));
-   var dec=(el.getAttribute('data-dec')==='1');
-   var obj={v:0};
-   ScrollTrigger.create({trigger:el,start:'top 88%',once:true,onEnter:function(){
-     gsap.to(obj,{v:t,duration:1.6,ease:'power2.out',onUpdate:function(){
-       el.textContent=(dec?obj.v.toFixed(1):Math.round(obj.v))+(el.getAttribute('data-suf')||'');
-     }});
-   }});
- });
- var slides=document.querySelectorAll('.tslide'),dots=document.querySelectorAll('.dots span'),i=0;
- if(slides.length){
-   setInterval(function(){slides[i].style.display='none';dots[i]&&dots[i].classList.remove('on');
-     i=(i+1)%slides.length;slides[i].style.display='block';dots[i]&&dots[i].classList.add('on');},4800);
- }
- var nav=document.querySelector('.nav');
- window.addEventListener('scroll',function(){nav.style.boxShadow=(window.scrollY>20)?'0 6px 20px rgba(0,0,0,.06)':'none';});
+  document.documentElement.classList.add('js');
+  var rev=document.querySelectorAll('[data-reveal]');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+    rev.forEach(function(el){io.observe(el);});
+  } else { rev.forEach(function(el){el.classList.add('in');}); }
+  document.querySelectorAll('[data-count]').forEach(function(el){
+    var t=parseFloat(el.getAttribute('data-count'));if(isNaN(t))return;
+    var dec=el.getAttribute('data-dec')==='1',suf=el.getAttribute('data-suf')||'',s=0,step=t/45;
+    var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){
+      var tm=setInterval(function(){s+=step;if(s>=t){s=t;clearInterval(tm);}el.textContent=(dec?s.toFixed(1):Math.round(s))+suf;},26);io2.unobserve(e.target);}});},{threshold:.5});
+    io2.observe(el);
+  });
+  var slides=document.querySelectorAll('.tslide'),dots=document.querySelectorAll('.dots span'),i=0;
+  if(slides.length){slides.forEach(function(s,idx){s.style.display=idx===0?'block':'none';});
+    setInterval(function(){slides[i].style.display='none';dots[i]&&dots[i].classList.remove('on');
+      i=(i+1)%slides.length;slides[i].style.display='block';dots[i]&&dots[i].classList.add('on');},5000);}
+  var nav=document.querySelector('.nav');
+  if(nav){window.addEventListener('scroll',function(){nav.style.boxShadow=(window.scrollY>20)?'0 6px 20px rgba(0,0,0,.06)':'none';});}
 })();
 </script>
 </body></html>
